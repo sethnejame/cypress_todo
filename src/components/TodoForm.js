@@ -5,5 +5,7 @@ export default props =>
     <input
       type='text'
       className="new-todo"
-      placeholder="What needs to be done?"/>
+      placeholder="What needs to be done?"
+      autoFocus
+      />
   </form>
