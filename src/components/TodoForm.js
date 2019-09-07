@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
 
-export default props =>
-  <form>
-    <input
-      type='text'
-      className="new-todo"
-      placeholder="What needs to be done?"
-      autoFocus
+const TodoForm = props => {
+  const { onChange } = props;
+  return (
+    <form>
+      <input
+        type="text"
+        className="new-todo"
+        placeholder="What needs to be done?"
+        autoFocus
+        value={props.currentTodo}
+        onChange={onChange}
       />
-  </form>
+    </form>
+  );
+};
+export default TodoForm;

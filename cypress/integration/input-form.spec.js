@@ -5,4 +5,13 @@ describe('Input form', () => {
     cy.focused()
       .should('have.class', 'new-todo')
   })
+
+  it.only('accepts input', () => {
+    const typedText = 'Drink beer'
+    cy.visit('http://localhost:3030')
+
+    cy.get('.new-todo')
+      .type('Drink beer')
+      .should('have.value', typedText)
+  })
 })
