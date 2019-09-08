@@ -1,9 +1,9 @@
 import React from "react";
 
 const TodoForm = props => {
-  const { onChange } = props;
+  const { onChange, handleSubmit } = props;
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         className="new-todo"
